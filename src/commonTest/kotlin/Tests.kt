@@ -1,5 +1,6 @@
 import com.github.ricky12awesome.jss.JsonSchema
 import com.github.ricky12awesome.jss.JsonSchema.*
+import com.github.ricky12awesome.jss.buildJsonSchema
 import com.github.ricky12awesome.jss.dsl.*
 import com.github.ricky12awesome.jss.encodeToSchema
 import com.github.ricky12awesome.jss.globalJson
@@ -62,7 +63,9 @@ class Tests {
 
   @Test
   fun annotated_schema() {
-    println(json.encodeToSchema(Config.serializer(), false))
+//    println(json.encodeToSchema(Config.serializer(), false))
+
+    println(buildJsonSchema(Config.serializer(), generateDefinitions = false, skipNullCheck = true))
   }
 
   @Test

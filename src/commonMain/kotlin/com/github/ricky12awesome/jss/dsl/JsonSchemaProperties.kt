@@ -84,7 +84,7 @@ inline fun <T, B : PropertyBuilder<T>> ArrayPropertyBuilder<T, B>.items(builder:
 }
 
 @ExperimentalJsonSchemaDSL
-inline fun CommonObjectBuilder<*>.additionalProperties(value: Boolean) {
+fun CommonObjectBuilder<*>.additionalProperties(value: Boolean) {
   data["additionalProperties"] = JsonPrimitive(value)
 }
 
